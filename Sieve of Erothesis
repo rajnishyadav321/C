@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define limit 100
+int main(){
+unsigned long long int i,j;
+int x;
+int *primes,*d;
+int z = 1,m=1,a,b,t;
+scanf("%d",&t);
+primes = (int *)malloc(sizeof(int)*limit);
+d = (int *)malloc(sizeof(int)*limit);
+for (i=2;i<limit;i++)
+primes[i]=1;
+for (i=2;i<limit;i++)
+if (primes[i])
+for (j=i;i*j<limit;j++)
+primes[i*j]=0;
+while(t--)
+{
+	
+		
+		long long int a,b,sum=0,count=0;
+		scanf("%lld%lld",&a,&b);
+		for(i=a;i<=b;i++){
+			if(primes[i])
+			printf("%llu\n",i);
+
+}
+}
+
+return 0;
+}
